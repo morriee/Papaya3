@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/cardview_shadow_start_color"
-    tools:context=".MainActivity">
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#EAEFF0"
+    tools:context="MainActivity">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -21,21 +20,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Memo"
-            android:textColor="@color/colorWhite"
-            android:textSize="32sp" />
+            android:text="Feed"
+            android:textColor="#f7f7f7"
+            android:textSize="32sp"
+            android:textStyle="bold"/>
 
     </androidx.appcompat.widget.Toolbar>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcvMain"
+    <ListView
+        android:id="@+id/memoList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#EAEFF0"
-        tools:listitem="@layout/item">
-
-    </androidx.recyclerview.widget.RecyclerView>
-
-
+        android:layout_above="@+id/buttonLayout"
+        android:layout_below="@+id/titleLayout"
+        android:layout_margin="4dp"
+        android:layout_weight="1"
+        android:cacheColorHint="#00000000"
+        android:divider="#00000000"
+        android:listSelector="#00000000" />
 
 </LinearLayout>
